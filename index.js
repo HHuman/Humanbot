@@ -32,16 +32,16 @@ client.on("guildMemberRemove", (member) => {
 client.on('message', (message) => {
   if(message.author.bot) return;
 
-  if(message.content == 'ping') {
-    return message.reply('pong');
+  if(message.content == '코코야') {
+    return message.reply('야옹~');
   }
 
   if(message.content == 'embed') {
-    let img = 'https://cdn.discordapp.com/avatars/284891713602977804/6687a6a70b263a9e061d1f98fe77035f.png?size=128';
+    let img = 'https://media.discordapp.net/attachments/478021476998709248/737239663928147989/Capture_2020-07-27-18-26-252.png';
     let embed = new Discord.RichEmbed()
       .setTitle('타이틀')
       .setURL('http://www.naver.com')
-      .setAuthor('휴먼', img, 'http://www.naver.com')
+      .setAuthor('코코', img, 'http://www.naver.com')
       .setThumbnail(img)
       .addBlankField()
       .addField('Inline field title', 'Some value here')
@@ -51,7 +51,7 @@ client.on('message', (message) => {
       .addField('Inline field title', 'Some value here1\nSome value here2\nSome value here3\n')
       .addBlankField()
       .setTimestamp()
-      .setFooter('휴먼', img)
+      .setFooter('코코', img)
 
     message.channel.send(embed)
   } else if(message.content == '!help') {
@@ -68,9 +68,9 @@ client.on('message', (message) => {
     ];
     let commandStr = '';
     let embed = new Discord.RichEmbed()
-      .setAuthor('Help of 휴먼 BOT', helpImg)
+      .setAuthor('Help of 코코 BOT', helpImg)
       .setColor('#186de6')
-      .setFooter(`휴먼 BOT`)
+      .setFooter(`코코 BOT`)
       .setTimestamp()
     
     commandList.forEach(x => {
@@ -110,9 +110,9 @@ client.on('message', (message) => {
     if(message.member != null) { // 채널에서 공지 쓸 때
       let contents = message.content.slice('!전체공지2'.length);
       let embed = new Discord.RichEmbed()
-        .setAuthor('공지 of 휴먼 BOT')
+        .setAuthor('공지 of 코코 BOT')
         .setColor('#186de6')
-        .setFooter(`휴먼 BOT`)
+        .setFooter(`코코 BOT`)
         .setTimestamp()
   
       embed.addField('공지: ', contents);
@@ -152,7 +152,7 @@ client.on('message', (message) => {
     if(isNum && (clearLine <= 0 || 100 < clearLine)) {
       message.channel.send("1부터 100까지의 숫자만 입력해주세요.")
       return;
-    } else if(!isNum) { // c @휴먼 3
+    } else if(!isNum) { // c @코코 3
       if(message.content.split('<@').length == 2) {
         if(isNaN(message.content.split(' ')[2])) return;
 
