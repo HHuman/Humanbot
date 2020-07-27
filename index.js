@@ -35,7 +35,7 @@ client.on('message', (message) => {
   if(message.author.bot) return;
 
   if(message.content == '코코야') {
-    return message.reply('야옹~');
+    return message.reply('= ㅇ ㅅ ㅇ = ?');
   }
 
   if(message.content == '!si') {
